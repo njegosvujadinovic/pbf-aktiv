@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #FCFAFA;
+  --color-foreground: #1a2a40;
+  --color-accent: #c5a059;
+  --color-accent-dark: #b08e4d;
+  
+  --radius-3xl: 24px;
+  --radius-4xl: 32px;
+}
+
+:root {
+  --background: #FCFAFA;
+  --foreground: #1a2a40;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Subtle Parchment Texture */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.04;
+  pointer-events: none;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  z-index: 50;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+}
+
